@@ -6,13 +6,18 @@
 import pyperclip
 
 
+
 #empty list
 a = pyperclip.paste()
 items = a.split()
+items.sort()
 
-print(items)
+
+print items
 
 for item in items:
     if item.isdigit():
         print("Number!")
     else: print("Letters!")
+
+pyperclip.copy(str(" ".join(items)))
